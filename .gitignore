@@ -1,0 +1,7 @@
+*
+
+!*/
+!*.scala
+!.gitignore
+
+*Test.scala
