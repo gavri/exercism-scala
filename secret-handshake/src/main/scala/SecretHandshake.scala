@@ -6,8 +6,7 @@ object SecretHandshake {
 
   def commands(n: Int): List[String] = {
     val isBitSet = (bit: Int) => (n & (1 << bit)) != 0
-    var result = bitPositionToCommand.filterKeys(isBitSet).values.toList
-    if (isBitSet(4)) result = result.reverse
-    result
+    val handshake = bitPositionToCommand.filterKeys(isBitSet).values.toList
+    if (isBitSet(4)) handshake.reverse else handshake
   }
 }
