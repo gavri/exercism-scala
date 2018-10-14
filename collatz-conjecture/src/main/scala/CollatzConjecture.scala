@@ -1,5 +1,7 @@
+import scala.annotation.tailrec
+
 object CollatzConjecture {
-  def stepsRecur(n: Int, count: Int): Int = n match {
+  @tailrec def stepsRecur(n: Int, count: Int): Int = n match {
     case 1 => count
     case n if isEven(n) => stepsRecur(n / 2, count + 1)
     case n => stepsRecur(3 * n + 1, count + 1)
